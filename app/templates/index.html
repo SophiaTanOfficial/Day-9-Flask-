@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <title>Community Events Board</title>
+    </head>
+    <body>
+      <h1>Community Events Board</h1>
+      <div class="event-list">
+        <ul>
+          <!--jinja templating. A for loop for HTML-->
+          {% for event in events %}
+          <!-- Makes a new list item for each event with this information-->
+            <li>{{ event.event }} - {{ event.date }}</li> <!-- for the first one, can also write event['event]-->
+          {% endfor %}
+        </ul>
+      </div>
+    </body>
+</html>
